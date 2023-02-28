@@ -1,0 +1,65 @@
+.color {
+    display: flex;
+    justify-content: space-around;
+    background-color: blueviolet;
+}
+
+.flex-positions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-title,
+.card-text {
+    text-align: center;
+}
+
+.card-price-view,
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    padding-top: 30px;
+    padding-bottom: 150px;
+    width: 700px;
+}
+
+.btn-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.table-stats {
+    background-color: white;
+}
+
+.container-title {
+    background-color: #34a558;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 300px;
+    /* width: 700px; */
+}
+
+.description {
+    padding-top: 3rem;
+}
