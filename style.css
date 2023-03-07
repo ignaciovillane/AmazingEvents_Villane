@@ -14,18 +14,29 @@
     text-align: center;
 }
 
-.card-price-view,
-footer {
+.card-price-view {
     display: flex;
     justify-content: space-between;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .container-card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 1rem;
 }
 
 .section-contact {
@@ -53,13 +64,20 @@ footer {
 }
 
 .details {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 300px;
-    /* width: 700px; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .description {
     padding-top: 3rem;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.body-details {
+    border-radius: 0%;
+    background-color: rgb(67, 214, 165);
 }
