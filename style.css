@@ -1,7 +1,7 @@
 .color {
     display: flex;
     justify-content: space-around;
-    background-color: blueviolet;
+    background-color: rgb(129, 126, 122);
 }
 
 .flex-positions {
@@ -14,29 +14,21 @@
     text-align: center;
 }
 
-.card-price-view {
-    display: flex;
-    justify-content: space-between;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
     width: 100%;
-}
-
-.container-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
 }
 
 .container-card {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 1rem;
+    align-content: stretch;
+    flex-wrap: wrap;
+    background: #bbb;
+    padding: 1em 2em 3em 4em;
 }
 
 .section-contact {
@@ -45,9 +37,15 @@ footer {
 }
 
 .contact {
-    padding-top: 30px;
-    padding-bottom: 150px;
-    width: 700px;
+    padding-top: 10px;
+    padding-bottom: 130px;
+    width: 1000px;
+    border-radius: 5px;
+    border-top: 1px solid rgb(5, 5, 5);
+    border-right: 1px solid rgb(5, 5, 5);
+    border-bottom: 1px solid rgb(5, 5, 5);
+    border-left: 1px solid rgb(5, 5, 5);
+    background-color: azure;
 }
 
 .btn-form {
@@ -64,8 +62,8 @@ footer {
 }
 
 .details {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 20rem;
 }
 
 .description {
@@ -80,4 +78,9 @@ footer {
 .body-details {
     border-radius: 0%;
     background-color: rgb(67, 214, 165);
+}
+
+.table-stats {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
