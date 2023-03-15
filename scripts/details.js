@@ -29,32 +29,6 @@ function findId(array, ident) {
     return arrayID
 }
 
-// function showCard(array) {
-//     containerCards.innerHTML = `
-
-// <div class="card" style="width: 18rem;">
-//     <div class="body-details">
-//         <div class="card-horizontal">
-//             <div >
-//                 <img  src="${array.image}" class="card-img-top" alt="Card image">
-//             </div>
-
-//             <div class="card-body">
-// <h4 class="card-title">Title: ${array.name}</h4>
-// <p class="card-text">Date: ${array.date}</p>
-// <p class="card-text">Description: ${array.description}</p>
-// <p class="card-text">Category: ${array.category}</p>
-// <p class="card-text">Place: ${array.place}</p>
-// <p class="card-text">Capacity: ${array.capacity}</p>
-// <p class="card-text">Assistance: ${array.assistance}</p>
-// <p class="card-text">Price: ${array.price}</p>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-
-//    `
-// }
 function showCard(array) {
     containerCards.innerHTML = `
 
