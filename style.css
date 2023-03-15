@@ -6,7 +6,7 @@
     
     .flex-positions {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
     
     .card-title,

@@ -82,7 +82,6 @@ function filterCategory(array) {
 showCard(showDetail(data.events))
 showCheck(data.events)
 
-
 function showDetail(array) {
     const eventDetail = array.map(e => {
         let aux = {}

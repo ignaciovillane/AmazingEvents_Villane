@@ -6,24 +6,6 @@ const contenedor = document.getElementById('contenedor')
 const contenedorCheck = document.getElementById('checkContainer')
 const input = document.querySelector('input')
 
-function getEvents(array) {
-    const eventNew = array.map(e => {
-        let aux = {}
-        aux.image = e.image
-        aux.name = e.name
-        aux.date = e.date
-        aux.description = e.description
-        aux.category = e.category
-        aux.place = e.place
-        aux.capacity = e.capacity
-        aux.assistance = e.assistance
-        aux.price = e.price
-        aux._id = e._id
-        return aux
-    })
-    return eventNew
-}
-
 function findId(array, ident) {
     let arrayID = array.find(eventDetail => eventDetail._id == ident)
     return arrayID
@@ -45,7 +27,7 @@ function showCard(array) {
         <p class="card-text">Category: ${array.category}</p>
         <p class="card-text">Place: ${array.place}</p>
         <p class="card-text">Capacity: ${array.capacity}</p>
-        <p class="card-text">Assistance: ${array.assistance}</p>
+        <p class="card-text">${array.assistance !== undefined ? "Assistance: " : "Assistance Estimate: "}${array.assistance !== undefined ? array.assistance : array.estimate}</p>
         <p class="card-text">Price: ${array.price}</p>
         </div>
       </div>
@@ -55,8 +37,6 @@ function showCard(array) {
    `
 }
 
-let arr = getEvents(data.events)
-console.log(arr)
-let arr2 = findId(arr, id)
+let arr2 = findId(data.events, id)
 console.log(arr2)
 showCard(arr2)
