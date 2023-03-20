@@ -6,9 +6,32 @@ const contenedor = document.getElementById('contenedor')
 const contenedorCheck = document.getElementById('checkContainer')
 const input = document.querySelector('input')
 
+let dataApi;
+
+async function fetchInfo() {
+    let data = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+        .then(resp => resp.json())
+        .then(allData => {
+            dataApi = allData;
+            return dataApi;
+        });
+    return data;
+};
+
+dataReturned();
+
+async function dataReturned() {
+    let dataApi = await fetchInfo();
+    showCard(findId(dataApi.events,id))
+};
+
+
+
+
 function findId(array, ident) {
     let arrayID = array.find(eventDetail => eventDetail._id == ident)
     return arrayID
+    
 }
 
 function showCard(array) {
@@ -36,7 +59,3 @@ function showCard(array) {
 
    `
 }
-
-let arr2 = findId(data.events, id)
-console.log(arr2)
-showCard(arr2)

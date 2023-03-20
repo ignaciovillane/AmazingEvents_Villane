@@ -7,8 +7,29 @@ input.addEventListener('input', superFilter)
 contenedorCheck.addEventListener('change', superFilter)
 
 
+let dataApi;
+
+async function fetchInfo() {
+    let data = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+        .then(resp => resp.json())
+        .then(allData => {
+            dataApi = allData;
+            return dataApi;
+        });
+    return data;
+};
+
+dataReturned();
+
+async function dataReturned() {
+    let dataApi = await fetchInfo();
+
+    showCard(showDetail(dataApi.events));
+    showCheck(dataApi.events);
+};
+
 function superFilter() {
-    let firstFilter = filterText(showDetail(data.events), input.value)
+    let firstFilter = filterText(showDetail(dataApi.events), input.value)
     let secondFilter = filterCategory(firstFilter)
     showCard(secondFilter)
 
@@ -34,7 +55,7 @@ function showCheck(array) {
 
 function showCard(array) {
     if (array.length == 0) {
-        contenedor.innerHTML = `<h2 class="display-1 fw-bolder">No existe el evento</h2>`
+        contenedor.innerHTML = `<h2 class="display-1 fw-bolder">The event does not exist</h2>`
         return
     }
     let tarjetas = ''
@@ -79,9 +100,9 @@ function filterCategory(array) {
     }
     return array
 }
-showCard(showDetail(data.events))
-showCheck(data.events)
 
+showCard(showDetail(dataApi.events))
+showCheck(dataApi.events)
 function showDetail(array) {
     const eventDetail = array.map(e => {
         let aux = {}
