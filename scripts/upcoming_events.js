@@ -30,7 +30,7 @@ async function dataReturned() {
 
 
 function superFilter() {
-   firstFilter = filterText(showDetail(dataApi.events), input.value)
+    firstFilter = filterText(showDetail(dataApi.events), input.value)
     let secondFilter = filterCategory(firstFilter)
     showCard(secondFilter)
 }
@@ -104,6 +104,7 @@ function filterCategory(array) {
 
 showCard(showDetail(dataApi.events))
 showCheck(dataApi.events)
+
 function showDetail(array) {
     const eventDetail = array.map(e => {
         let aux = {}

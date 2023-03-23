@@ -22,7 +22,7 @@ dataReturned();
 
 async function dataReturned() {
     let dataApi = await fetchInfo();
-    showCard(findId(dataApi.events,id))
+    showCard(findId(dataApi.events, id))
 };
 
 
@@ -31,13 +31,13 @@ async function dataReturned() {
 function findId(array, ident) {
     let arrayID = array.find(eventDetail => eventDetail._id == ident)
     return arrayID
-    
+
 }
 
 function showCard(array) {
     containerCards.innerHTML = `
-
-    <div class="card mb-3" style="max-width: 100%;">
+     <div class="custom-card">
+    <div class="card mx-auto col-11 offset-3" style="max-width: 100%;">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img class="img-fluid" src="${array.image}">
@@ -55,6 +55,7 @@ function showCard(array) {
         </div>
       </div>
     </div>
+</div>
 </div>
 
    `

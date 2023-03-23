@@ -103,6 +103,7 @@ function filterCategory(array) {
 
 showCard(showDetail(dataApi.events))
 showCheck(dataApi.events)
+
 function showDetail(array) {
     const eventDetail = array.map(e => {
         let aux = {}
