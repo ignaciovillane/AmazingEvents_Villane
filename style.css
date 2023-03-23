@@ -6,7 +6,7 @@
 
 .flex-positions {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-content: space-between;
 }
 
@@ -23,13 +23,9 @@ body {
 }
 
 .container-card {
-    display: flex;
-    align-content: stretch;
-    flex-wrap: wrap;
     background: #bbb;
     padding: 1em 2em 3em 4em;
 }
-
 
 .section-contact {
     display: flex;
@@ -59,25 +55,6 @@ body {
 
 .container-title {
     background-color: #34a558;
-}
-
-.details {
-    padding-top: 4rem;
-    padding-bottom: 20rem;
-}
-
-.description {
-    padding-top: 3rem;
-}
-
-.card-horizontal {
-    display: flex;
-    flex: 1 1 auto;
-}
-
-.body-details {
-    border-radius: 0%;
-    background-color: rgb(67, 214, 165);
 }
 
 .table-stats {
@@ -114,4 +91,8 @@ td {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+}
+
+input[type=checkbox] {
+    margin: 5px !important;
 }

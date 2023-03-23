@@ -28,22 +28,7 @@ async function dataReturned() {
     let futureCat = Array.from(new Set(eventosFuturos.map(data => data.category)))
     let pastCat = Array.from(new Set(eventosPasados.map(dat => dat.category)))
 
-    let tabla1 = {
-        'mayorCapacidad': eventosPasados.sort(function(a, b) { return b.capacity - a.capacity })[0],
-        'mayorPorcentaje': eventosPasados.sort(function(a, b) { return b.porcentaje - a.porcentaje })[0],
-        'menorPorcentaje': eventosPasados.sort(function(a, b) { return a.porcentaje - b.porcentaje })[0]
-    }
-
-
-    let tdTable1 = `  <tr>
-    <td>${tabla1.mayorPorcentaje.name} (${tabla1.mayorPorcentaje.porcentaje}%)</td>
-    <td>${tabla1.menorPorcentaje.name} (${tabla1.menorPorcentaje.porcentaje}%)</td>
-    <td>${tabla1.mayorCapacidad.name} (${tabla1.mayorCapacidad.capacity})</td>
-    </tr>`
-
-
-    bodyTable1.innerHTML = tdTable1;
-
+    showTable1(eventosPasados)
     let tableFuture = tableCategories(futureCat, eventosFuturos)
     console.log(tableCategories(futureCat, eventosFuturos))
     showTable(tableFuture, bodyTable2, futureCat)
@@ -54,6 +39,25 @@ async function dataReturned() {
 
 
 };
+
+function showTable1(array) {
+
+    let tabla1 = {
+        'maxCapacity': array.sort(function(a, b) { return b.capacity - a.capacity })[0],
+        'maxPorcent': array.sort(function(a, b) { return b.porcentaje - a.porcentaje })[0],
+        'minPorcent': array.sort(function(a, b) { return a.porcentaje - b.porcentaje })[0]
+    }
+
+
+    let tdTable1 = `  <tr>
+    <td>${tabla1.maxPorcent.name} (${tabla1.maxPorcent.porcentaje}%)</td>
+    <td>${tabla1.minPorcent.name} (${tabla1.minPorcent.porcentaje}%)</td>
+    <td>${tabla1.maxCapacity.name} (${tabla1.maxCapacity.capacity})</td>
+    </tr>`
+
+
+    bodyTable1.innerHTML = tdTable1;
+}
 
 function porcentAssintance(events) {
     events.forEach(event => {

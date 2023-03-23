@@ -102,9 +102,6 @@ function filterCategory(array) {
     }
     return array
 }
-//showCard(showDetail(data.events))
-//showCheck(data.events)
-
 showCard(showDetail(dataApi.events))
 showCheck(dataApi.events)
 
